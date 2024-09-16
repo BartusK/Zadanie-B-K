@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApkaOO.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="kostka.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Gra w kości"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+
+
+            <StackLayout>
+                <Label Text="Wybierz kość do gry" />
+                <RadioButton>
+                    <RadioButton.Content>
+                        <Image
+                         Source="kostkak4.jfif" 
+                         HeightRequest="185"
+                         Aspect="AspectFit"
+               />
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Content>
+                        <Image
+                            Source="kostka.jpg" 
+                            HeightRequest="185"
+                            Aspect="AspectFit"
+                               />
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Content>
+                        <Image 
+                            Source="kostkak8.jfif"
+                            HeightRequest="185"
+                            Aspect="AspectFit"/>
+                    </RadioButton.Content>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Content>
+                        <Image Source="kostkak12.jfif" 
+                               HeightRequest="185"
+                               Aspect="AspectFit"/>
+                    </RadioButton.Content>
+                </RadioButton>
+            </StackLayout>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Rzuć kostką" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+            <Label
+                x:Name="RollValueLabel"
+                Text="Wynik rzutu: "
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
